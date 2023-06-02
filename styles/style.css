@@ -1,0 +1,89 @@
+*{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(http://1.bp.blogspot.com/-CIiFSDy5UrE/Va-JxwaLjuI/AAAAAAAAIMQ/bCykp_TV3oQ/s1600/fundo-marrom%2B%25281%2529.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  letter-spacing: 3px;
+  font-size: 1.3rem;
+}
+
+.calculadora{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    }
+
+.numbers{
+  cursor: pointer;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #eee;
+}
+
+.operators{
+  background: #926C4F;
+  font-size: 28px;
+  border: none;
+  outline: none;
+  color: #eee;
+  cursor: pointer;
+}
+
+.span-two{
+  grid-column: span 2;
+  background: #47D1FF;
+  font-size: 38px;
+  border: none;
+  outline: none;
+  color: #eee;
+  cursor: pointer;
+}
+
+.output{
+  grid-column: 1/-1;
+  background-color: #333;
+  color: #eee;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.previous-operations {
+  color: #92B3B5;
+  font-size: 1.5rem;
+}
+
+.current-operations {
+  color: #eee;
+  font-size: 2.5rem;
+}
+
+/*-------------------HOVERS-------------------------------------------*/
+
+.numbers:hover {
+  background-color: #777;
+}
+
+.span-two:hover {
+  background-color: #13a8da;
+}
+
+.operators:hover{
+  background-color: #85512a;
+}
+
