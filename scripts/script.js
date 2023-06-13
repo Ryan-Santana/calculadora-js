@@ -46,28 +46,35 @@ processOperation(operation) {
             operationValue = previous + current
             this.UpdateScreen(operationValue, operation, current, previous)
             break;
+
         case "-":
             operationValue = previous - current
             this.UpdateScreen(operationValue, operation, current, previous)
             break;
+
         case "÷":
             operationValue = previous / current
             this.UpdateScreen(operationValue, operation, current, previous)
             break;
+
         case "X":
             operationValue = previous * current
             this.UpdateScreen(operationValue, operation, current, previous)
             break;
+
         case "√":
             operationValue = Math.sqrt(current)
-            this.UpdateScreen(operationValue, operation, current, previous)
+            this.UpdateScreen(operationValue, operation)
             break;
+
         case "⇤":
             this.processEraseOperator();
             break;
+
         case "DEL":
             this.processDeleteOperator();
             break;
+
         case "=":
             this.processEqualOperator();
             break;
@@ -90,7 +97,7 @@ processOperation(operation) {
 
         }
     }
-
+    // Estrutura que troca o operador do painel
     changeOperation(operation){
         const mathOperations = ["+", "-", "÷", "X", "√"]
 
@@ -99,7 +106,7 @@ processOperation(operation) {
         }
         this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0, -1) + operation
     }
-
+    //Estrutura do apagar, deletar e igual
     processEraseOperator(){
         this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0,-1);
     }
